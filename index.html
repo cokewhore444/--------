@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خیلی سبز | فروشگاه کتاب کمک درسی</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/Collections.css" />
+    <link rel="stylesheet" href="./css/setting.css" />
+    <link rel="stylesheet" href="./css/Header.css" />
+    <link rel="stylesheet" href="./css/Input.css" />
+    <link rel="stylesheet" href="./css/Advertisement.css" />
+    <link rel="stylesheet" href="./css/BookSlider.css" />
+    <link rel="stylesheet" href="./css/Category.css" />
+    <link rel="stylesheet" href="./css/Footer.css" />
+    <link rel="stylesheet" href="./css/Cart.css" />
+    <link rel="stylesheet" href="./css/BackToTop.css" />
+    <link rel="stylesheet" href="./css/Toast.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header id="header"></header>
+
+      <section class="advertisement-section">
+        <div class="container">
+          <div class="swiper hero-swiper">
+            <div class="swiper-wrapper" id="heroWrapper"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-section">
+        <div class="container">
+          <div class="search-bar" id="searchBar"></div>
+        </div>
+      </section>
+
+      <section class="products-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">ویژه‌ها</h2>
+            <a href="#" class="view-all">مشاهده همه ←</a>
+          </div>
+          <div class="swiper products-swiper">
+            <div class="swiper-wrapper" id="productWrapper"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="collections-section">
+        <div class="container">
+          <div class="collections-grid" id="collectionsGrid"></div>
+        </div>
+      </section>
+
+      <section class="suggestions-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">پیشنهادات</h2>
+            <a href="#" class="view-all">مشاهده همه ←</a>
+          </div>
+          <div class="swiper suggestions-swiper">
+            <div class="swiper-wrapper" id="suggestionWrapper"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="categories-section">
+        <div class="container">
+          <h2 class="section-title">دسته‌بندی کتاب‌ها</h2>
+          <div class="category-grid" id="categoryGrid"></div>
+        </div>
+      </section>
+
+      <footer class="main-footer" id="footer"></footer>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2c-2 2-3 5-3 8v2H6l-1 3h3v3c0 1 .5 2 1.5 3h5c1-1 1.5-2 1.5-3v-3h3l-1-3h-3v-2c0-3-1-6-3-8z"
+          fill="#fff"
+        />
+        <circle cx="12" cy="9" r="1.8" fill="#2e7d32" />
+        <path d="M10 20c0 1 1 2 2 2s2-1 2-2" fill="#ff9800" />
+      </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/Header/header.js"></script>
+    <script src="./js/Header/megaMenu.js"></script>
+    <script src="./js/Input/Input.js"></script>
+    <script src="./js/BookCard/BookCard.js"></script>
+    <script src="./js/Swiper/swipersSlij.js"></script>
+    <script src="./js/BackToTop/backToTop.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

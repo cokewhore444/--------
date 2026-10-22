@@ -1,0 +1,128 @@
+
+.advertisement-section {
+    background: #f7f8e8;
+    padding: 30px 20px 60px 20px;   
+}
+
+
+.hero-swiper {
+    max-width: 1300px;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    background: #fff;
+}
+
+
+.hero-swiper .swiper-slide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-swiper .swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;  
+}
+
+
+.hero-swiper:hover {
+    cursor: grab;
+}
+
+.hero-swiper:active {
+    cursor: grabbing;
+}
+
+.hero-swiper .swiper-pagination {
+    position: absolute;
+    bottom: -45px !important;        
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    width: auto !important;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    opacity: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 !important;
+}
+
+.hero-swiper .swiper-pagination-bullet:hover {
+    background: #999;
+    transform: scale(1.15);
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+    width: 32px;
+    border-radius: 6px;
+    background: #2e7d32;
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.4);
+}
+
+@media (max-width: 992px) {
+    .advertisement-section {
+        padding: 20px 15px 50px 15px;
+    }
+
+    .hero-swiper {
+        border-radius: 15px;
+    }
+
+    .hero-swiper .swiper-pagination {
+        bottom: -38px !important;
+        gap: 8px;
+    }
+
+    .hero-swiper .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+
+    .hero-swiper .swiper-pagination-bullet-active {
+        width: 26px;
+    }
+}
+
+@media (max-width: 576px) {
+    .advertisement-section {
+        padding: 15px 10px 45px 10px;
+    }
+
+    .hero-swiper {
+        border-radius: 12px;
+    }
+
+    .hero-swiper .swiper-pagination {
+        bottom: -32px !important;
+        gap: 6px;
+    }
+
+    .hero-swiper .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+
+    .hero-swiper .swiper-pagination-bullet-active {
+        width: 22px;
+    }
+}

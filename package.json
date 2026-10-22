@@ -1,0 +1,15 @@
+{
+  "name": "khelysabz",
+  "version": "1.0.0",
+  "description": "خیلی سبز",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "server": "json-server db.json",
+    "Json": "json-server --watch ./db.json"
+  },
+  "dependencies": {
+    "json-server": "^1.0.0-beta.15",
+    "swiper": "^11.0.0"
+  }
+}

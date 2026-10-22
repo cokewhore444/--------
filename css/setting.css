@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Tahoma", "IRANSans", sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    direction: rtl;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 22px;
+    font-weight: 900;
+    color: #1a1a1a;
+}
+
+.view-all {
+    color: #2e7d32;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.view-all:hover { color: #1b5e20; }
+
+@media (max-width: 768px) {
+    .section-title { font-size: 18px; }
+    .container { padding: 0 15px; }
+}

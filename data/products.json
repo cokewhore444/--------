@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "ماجرا انگلیسی دوازدهم +",
+    "price": 260000,
+    "discount": 320000,
+    "image": "./images/book-1.png"
+  },
+  {
+    "id": 2,
+    "title": "فیزیک جامع کنکور",
+    "price": 285000,
+    "discount": 350000,
+    "image": "./images/book-2.png"
+  },
+  {
+    "id": 3,
+    "title": "زیست‌شناسی جامع جلد ۱",
+    "price": 245000,
+    "discount": 300000,
+    "image": "./images/book-3.png"
+  },
+  {
+    "id": 4,
+    "title": "ماجرا دین و زندگی دوازدهم",
+    "price": 320000,
+    "discount": 400000,
+    "image": "./images/book-4.png"
+  },
+  {
+    "id": 5,
+    "title": "زیست‌شناسی جامع جلد ۲",
+    "price": 198000,
+    "discount": 240000,
+    "image": "./images/book-5.png"
+  },
+  {
+    "id": 6,
+    "title": "انگلیسی دوازدهم Beast Mode",
+    "price": 215000,
+    "discount": 260000,
+    "image": "./images/book-6.png"
+  }
+]

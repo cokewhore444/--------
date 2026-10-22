@@ -1,0 +1,134 @@
+.collections-section {
+  padding: 25px 0;
+  background: #fff;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px 14px;
+  margin-top: 10px;
+  padding: 0;
+}
+
+.collection-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: 0;
+  min-height: 80px;
+  padding: 6px;
+
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.collection-card:hover {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: #f0f0f0;
+}
+
+.collection-card img {
+  display: block;
+  width: 100%;
+  max-width: 125px;
+  height: 58px;
+  object-fit: contain;
+
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+
+.collection-card:hover img {
+  transition: none !important;
+  animation: none !important;
+  transform: none !important;
+}
+
+
+.collection-card .collection-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  line-height: 1.4;
+
+  transition: none !important;
+}
+
+@media (max-width: 1200px) {
+  .collections-grid {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .collections-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .collection-card {
+    min-height: 75px;
+    padding: 5px;
+  }
+
+  .collection-card img {
+    height: 52px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .collections-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .collection-card {
+    min-height: 68px;
+  }
+
+  .collection-card img {
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .collections-section {
+    padding: 18px 0;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .collection-card {
+    min-height: 62px;
+    padding: 4px;
+    border-radius: 8px;
+  }
+
+  .collection-card img {
+    height: 42px;
+  }
+}
