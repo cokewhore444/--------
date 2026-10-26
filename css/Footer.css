@@ -1,91 +1,172 @@
-
+/* ============================================
+   ===== فوتر (سفید، شبیه سایت اصلی) =====
+   ============================================ */
 .main-footer {
-    background: #1a1a1a;
-    color: #ddd;
+    background: #fff;
+    color: #333;
     padding: 50px 0 0;
+    border-top: 1px solid #eee;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
 }
 
-.footer-grid h3 {
-    color: #fff;
-    margin-bottom: 20px;
+/* ستون درباره ما */
+.footer-about h3 {
     font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
 }
 
-.footer-grid p {
-    font-size: 14px;
+.footer-about p {
+    font-size: 13px;
     line-height: 1.8;
-    color: #aaa;
+    color: #666;
+    text-align: justify;
 }
 
-.footer-grid ul li { margin-bottom: 10px; }
+/* ستون لینک‌ها */
+.footer-grid h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.footer-grid ul li {
+    margin-bottom: 12px;
+}
 
 .footer-grid ul a {
-    color: #aaa;
+    color: #666;
     font-size: 14px;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
-.footer-grid ul a:hover { color: #66bb6a; }
+.footer-grid ul a:hover {
+    color: #2e7d32;
+}
 
+/* ============================================
+   ===== آیکون‌ها و نمادها =====
+   ============================================ */
+.footer-logos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* آیکون‌ها سمت راست */
+    gap: 20px;
+}
+
+/* آیکون‌های شبکه‌های اجتماعی */
 .social-icons {
     display: flex;
     gap: 12px;
-    flex-wrap: wrap;
 }
 
 .social-link {
-    width: 46px;
-    height: 46px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #2a2a2a;
-    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: #f5f5f5;
+    /* ❌ بدون انیمیشن */
+    transition: background 0.3s ease; 
 }
 
 .social-link svg {
     width: 22px;
     height: 22px;
-    transition: transform 0.35s ease;
 }
 
-.social-link svg path { fill: #fff; transition: fill 0.3s ease; }
+.social-link svg path {
+    fill: #666;
+    transition: fill 0.3s ease;
+}
 
 .social-link:hover {
-    transform: translateY(-5px) scale(1.08);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: #e0e0e0;
 }
 
-.social-link:hover svg { transform: scale(1.15); }
-
+/* رنگ‌های اختصاصی فقط موقع هاور روی آیکون */
 .social-link.telegram:hover { background: #229ed9; }
-.social-link.instagram:hover {
-    background: linear-gradient(45deg, #f09433, #dc2743, #bc1888);
-}
-.social-link.aparat:hover { background: #ed145b; }
-.social-link.aparat .aparat-bg { fill: #fff; }
-.social-link.aparat .aparat-dot { fill: #2a2a2a; }
-.social-link.aparat .aparat-line { stroke: #fff; }
-.social-link.aparat:hover .aparat-dot { fill: #ed145b; }
-.social-link.youtube:hover { background: #ff0000; }
+.social-link.telegram:hover svg path { fill: #fff; }
 
+.social-link.instagram:hover { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
+.social-link.instagram:hover svg path { fill: #fff; }
+
+.social-link.aparat:hover { background: #ed145b; }
+.social-link.aparat:hover .aparat-dot { fill: #ed145b; } /* دایره‌های داخل آپارات قرمز می‌شن */
+
+.social-link.youtube:hover { background: #ff0000; }
+.social-link.youtube:hover svg path { fill: #fff; }
+
+/* آیکون‌های نماد اعتماد */
+.trust-logos {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.trust-logos img {
+    height: 80px; /* سایز دلخواه برای نمادها */
+    width: auto;
+    object-fit: contain;
+}
+
+/* ============================================
+   ===== کپی‌رایت =====
+   ============================================ */
 .copyright {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     margin-top: 40px;
-    border-top: 1px solid #333;
+    border-top: 1px solid #f0f0f0;
     font-size: 13px;
-    color: #888;
+    color: #999;
+    background: #fff;
+}
+
+/* ============================================
+   ===== ریسپانسیو =====
+   ============================================ */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-logos {
+        align-items: flex-start;
+    }
 }
 
 @media (max-width: 768px) {
-    .social-link { width: 40px; height: 40px; }
-    .social-link svg { width: 18px; height: 18px; }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-about p {
+        text-align: center;
+    }
+
+    .footer-logos {
+        align-items: center;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-link svg {
+        width: 18px;
+        height: 18px;
+    }
 }
