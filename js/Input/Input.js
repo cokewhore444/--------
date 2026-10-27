@@ -1,4 +1,6 @@
-(function buildSearchBar() {
+import { showNotification } from "../utils.js";
+
+export function buildSearchBar() {
     const searchBar = document.getElementById('searchBar');
     if (!searchBar) return;
 
@@ -29,4 +31,4 @@
     if (btn) btn.addEventListener('click', doSearch);
 
     console.log('✅ نوار جستجو ساخته شد');
-})();
+}

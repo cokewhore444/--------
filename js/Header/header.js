@@ -1,7 +1,7 @@
 // ============================================
 // ===== ساخت هدر =====
 // ============================================
-(function buildHeader() {
+export function buildHeader() {
     const header = document.getElementById('header');
     if (!header) return;
 
@@ -111,4 +111,4 @@
     }
 
     console.log('✅ هدر با لوگوی SVG ساخته شد');
-})();
+}

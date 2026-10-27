@@ -1,5 +1,5 @@
 
-(function initBackToTop() {
+export function initBackToTop() {
     const btn = document.getElementById('backToTop');
     if (!btn) return;
 
@@ -13,4 +13,4 @@
     });
 
     console.log('✅ BackToTop لود شد');
-})();
+}

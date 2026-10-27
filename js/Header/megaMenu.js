@@ -1,5 +1,5 @@
 
-(function initMegaMenu() {
+export function initMegaMenu() {
     function setupMegaMenu() {
         const dropdown = document.querySelector(
             '.header-nav > ul > li.has-dropdown'
@@ -66,13 +66,5 @@
         console.log('منوی کتاب‌ها آماده است.');
     }
 
-    if (document.readyState === 'loading') {
-        document.addEventListener(
-            'DOMContentLoaded',
-            setupMegaMenu,
-            { once: true }
-        );
-    } else {
-        setupMegaMenu();
-    }
-})();
+    setupMegaMenu();
+}

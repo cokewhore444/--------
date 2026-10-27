@@ -1,5 +1,8 @@
+import { toPersianNumber, formatPrice, showNotification } from "../utils.js";
+import { productsData, suggestionsData } from "../data.js";
 
-function createProductCard(product) {
+
+export function createProductCard(product) {
     const discountPercent = Math.round(
         ((product.discount - product.price) / product.discount) * 100
     );
@@ -18,7 +21,7 @@ function createProductCard(product) {
                         <span class="discount">${formatPrice(product.discount)}</span>
                     </div>
                 </div>
-                <button class="add-to-cart" onclick="addToCart(${product.id})">
+                <button class="add-to-cart" data-add-to-cart="${product.id}">
                     <i class="fas fa-cart-plus"></i>
                     افزودن به سبد
                 </button>
@@ -28,3 +31,14 @@ function createProductCard(product) {
 }
 
 console.log('✅ BookCard.js لود شد');
+
+export function initProductCardActions(container = document) {
+  container.querySelectorAll("[data-add-to-cart]:not([data-cart-ready])").forEach((button) => {
+    button.dataset.cartReady = "true";
+    button.addEventListener("click", () => {
+      const id = Number(button.dataset.addToCart);
+      const product = [...productsData, ...suggestionsData].find((item) => item.id === id);
+      showNotification(product ? `«${product.title}» به سبد خرید اضافه شد.` : "محصول انتخاب شد.");
+    });
+  });
+}

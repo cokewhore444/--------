@@ -1,13 +1,13 @@
 
-function toPersianNumber(num) {
+export function toPersianNumber(num) {
     const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
     return num.toString().replace(/\d/g, d => persianDigits[d]);
 }
 
-function formatPrice(price) {
+export function formatPrice(price) {
     return toPersianNumber(price.toLocaleString('en-US')) + ' تومان';
 }
-function showNotification(message) {
+export function showNotification(message) {
     const notif = document.createElement('div');
     notif.className = 'toast-notification';
     notif.textContent = message;

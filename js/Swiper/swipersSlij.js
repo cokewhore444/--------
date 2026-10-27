@@ -1,9 +1,11 @@
 // ============================================
 // ===== راه‌اندازی Swiper ها =====
 // ============================================
-function initAllSwipers() {
+export function initAllSwipers() {
+    if (typeof Swiper === 'undefined') { console.warn('Swiper بارگذاری نشده است.'); return; }
+
     // اسلایدر ویژه‌ها
-    new Swiper('.products-swiper', {
+    if (document.querySelector('.products-swiper .swiper-wrapper')?.children.length) new Swiper('.products-swiper', {
         slidesPerView: 5,
         spaceBetween: 18,
         loop: true,
@@ -20,7 +22,7 @@ function initAllSwipers() {
     });
 
     // اسلایدر پیشنهادات
-    new Swiper('.suggestions-swiper', {
+    if (document.querySelector('.suggestions-swiper .swiper-wrapper')?.children.length) new Swiper('.suggestions-swiper', {
         slidesPerView: 5,
         spaceBetween: 18,
         loop: true,
