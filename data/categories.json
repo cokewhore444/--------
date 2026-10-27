@@ -1,8 +1,0 @@
-[
-  { "id": 1, "title": "کنکور تجربی", "icon": "fa-dna" },
-  { "id": 2, "title": "کنکور ریاضی", "icon": "fa-calculator" },
-  { "id": 3, "title": "کنکور انسانی", "icon": "fa-globe" },
-  { "id": 4, "title": "متوسطه اول", "icon": "fa-pencil-alt" },
-  { "id": 5, "title": "ابتدایی", "icon": "fa-child" },
-  { "id": 6, "title": "پیش‌دبستانی", "icon": "fa-star" }
-]

@@ -1,3 +1,6 @@
+// ============================================
+// ===== ساخت هدر =====
+// ============================================
 (function buildHeader() {
     const header = document.getElementById('header');
     if (!header) return;
@@ -5,14 +8,12 @@
     header.className = 'main-header';
     header.innerHTML = `
         <div class="container header-content">
+            
+            <!-- ⭐ لوگو (SVG اصلی) -->
             <div class="logo">
-                <div class="logo-text">
-                    <span class="logo-icon">🍏</span>
-                    <div>
-                        <h1>خیلی سبز</h1>
-                        <small>انتشارات</small>
-                    </div>
-                </div>
+                <a href="#" class="logo-link">
+                    <img src="./svg/logo.svg" alt="خیلی سبز" class="logo-img">
+                </a>
             </div>
 
             <nav class="header-nav">
@@ -95,11 +96,12 @@
         </div>
     `;
 
+    // افکت اسکرول
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 50);
     }, { passive: true });
 
-
+    // منوی موبایل
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     if (menuToggle && mobileMenu) {
@@ -108,5 +110,5 @@
         });
     }
 
-    console.log('✅ هدر ساخته شد');
+    console.log('✅ هدر با لوگوی SVG ساخته شد');
 })();

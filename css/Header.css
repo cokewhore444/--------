@@ -1,4 +1,6 @@
-
+/* ============================================
+   ===== هدر چسبان =====
+   ============================================ */
 .main-header {
     background: #fff;
     position: sticky;
@@ -12,7 +14,9 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.main-header.scrolled .header-content { padding: 8px 0; }
+.main-header.scrolled .header-content {
+    padding: 8px 0;
+}
 
 .header-content {
     display: flex;
@@ -23,28 +27,28 @@
     transition: padding 0.3s ease;
 }
 
-.logo-text {
+/* ============================================
+   ===== لوگو (عکس جدید) =====
+   ============================================ */
+.logo-link {
     display: flex;
     align-items: center;
-    gap: 10px;
+    text-decoration: none;
 }
 
-.logo-icon {
-    font-size: 38px;
-    transition: font-size 0.3s ease;
+.logo-img {
+    height: 60px;
+    width: auto;
+    transition: height 0.3s ease;
 }
 
-.main-header.scrolled .logo-icon { font-size: 30px; }
-
-.logo-text h1 {
-    color: #2e7d32;
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 1;
+.main-header.scrolled .logo-img {
+    height: 45px;
 }
 
-.logo-text small { font-size: 11px; color: #888; }
-
+/* ============================================
+   ===== منوی ناوبری =====
+   ============================================ */
 .header-nav ul {
     display: flex;
     gap: 3px;
@@ -66,6 +70,9 @@
     color: #2e7d32;
 }
 
+/* ============================================
+   ===== اکشن‌های هدر =====
+   ============================================ */
 .header-actions {
     display: flex;
     align-items: center;
@@ -83,7 +90,10 @@
     transition: 0.3s;
 }
 
-.login-btn:hover { background: #ffc107; color: #fff; }
+.login-btn:hover {
+    background: #ffc107;
+    color: #fff;
+}
 
 .cart-btn {
     position: relative;
@@ -94,7 +104,9 @@
     cursor: pointer;
 }
 
-.cart-btn:hover { color: #2e7d32; }
+.cart-btn:hover {
+    color: #2e7d32;
+}
 
 .cart-count {
     position: absolute;
@@ -123,6 +135,9 @@
     padding: 8px;
 }
 
+/* ============================================
+   ===== منوی موبایل =====
+   ============================================ */
 .mobile-menu {
     display: none;
     background: #fff;
@@ -132,8 +147,14 @@
     transition: max-height 0.3s ease;
 }
 
-.mobile-menu.open { max-height: 500px; }
-.mobile-menu ul { padding: 10px 20px; }
+.mobile-menu.open {
+    max-height: 500px;
+}
+
+.mobile-menu ul {
+    padding: 10px 20px;
+}
+
 .mobile-menu a {
     display: block;
     padding: 12px 0;
@@ -141,18 +162,9 @@
     border-bottom: 1px solid #f0f0f0;
 }
 
-@media (max-width: 992px) {
-    .header-nav { display: none; }
-    .menu-toggle { display: block; }
-    .login-btn { display: none; }
-    .mobile-menu { display: block; }
-}
-
-@media (max-width: 768px) {
-    .logo-text h1 { font-size: 20px; }
-    .logo-icon { font-size: 30px; }
-}
-
+/* ============================================
+   ===== منوی کشویی (Mega Menu) =====
+   ============================================ */
 .header-nav > ul > li.has-dropdown {
     position: relative;
 }
@@ -229,7 +241,26 @@
     color: #2e7d32;
 }
 
+/* ============================================
+   ===== ریسپانسیو =====
+   ============================================ */
 @media (max-width: 992px) {
+    .header-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
     .header-nav .mega-menu {
         width: 90vw;
         max-width: 100%;
@@ -242,8 +273,17 @@
     }
 }
 
+@media (max-width: 768px) {
+    .logo-img {
+        height: 45px;
+    }
+    
+    .main-header.scrolled .logo-img {
+        height: 35px;
+    }
+}
+
 @media (max-width: 480px) {
     .header-nav .mega-menu-inner {
         grid-template-columns: 1fr;
     }
-}

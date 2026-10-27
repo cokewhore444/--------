@@ -51,20 +51,6 @@
     50% { transform: translateY(-4px) rotate(10deg); }
 }
 
-.back-to-top::before {
-    content: "";
-    position: absolute;
-    inset: -5px;
-    border-radius: 50%;
-    border: 2px solid #66bb6a;
-    opacity: 0;
-    animation: pulseRing 2s ease-out infinite;
-}
-
-@keyframes pulseRing {
-    0% { opacity: 0.8; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1.5); }
-}
 
 @media (max-width: 768px) {
     .back-to-top { width: 48px; height: 48px; bottom: 20px; left: 20px; }

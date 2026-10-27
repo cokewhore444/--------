@@ -1,5 +1,5 @@
 /* ============================================
-   ===== فوتر (سفید، شبیه سایت اصلی) =====
+   ===== فوتر =====
    ============================================ */
 .main-footer {
     background: #fff;
@@ -10,61 +10,82 @@
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 40px;
+    /* ⭐ ستون اول بزرگ‌تر، بقیه کوچیک‌تر و فاصله‌ها بیشتر */
+    grid-template-columns: 2.5fr 1fr 1.2fr 1.5fr; 
+    gap: 50px; 
 }
 
-/* ستون درباره ما */
+/* ===== ستون درباره ما ===== */
 .footer-about h3 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
     color: #333;
 }
 
 .footer-about p {
-    font-size: 13px;
-    line-height: 1.8;
-    color: #666;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #555;
     text-align: justify;
+    margin-bottom: 25px; /* ⭐ فاصله متن تا نماد اعتماد */
 }
 
-/* ستون لینک‌ها */
-.footer-grid h3 {
+/* ⭐ لوگو در فوتر */
+.footer-logo {
+    height: 85px; /* بزرگ‌تر شد */
+    width: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* ⭐ نماد اعتماد (زیر متن قرار می‌گیرد) */
+.trust-logos {
+    display: block;
+    margin-top: 10px;
+}
+
+.trust-logos img {
+    height: 100px; 
+    width: auto;
+    object-fit: contain;
+}
+
+/* ===== ستون‌های لینک ===== */
+.footer-links h3 {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 20px;
     color: #333;
 }
 
-.footer-grid ul li {
+.footer-links ul li {
     margin-bottom: 12px;
 }
 
-.footer-grid ul a {
+.footer-links ul a {
     color: #666;
     font-size: 14px;
     transition: color 0.3s ease;
 }
 
-.footer-grid ul a:hover {
+.footer-links ul a:hover {
     color: #2e7d32;
 }
 
 /* ============================================
-   ===== آیکون‌ها و نمادها =====
+   ===== ستون شبکه‌های اجتماعی =====
    ============================================ */
-.footer-logos {
+.footer-socials {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end; /* آیکون‌ها سمت راست */
-    gap: 20px;
+    align-items: flex-start; /* تراز آیکون‌ها از بالا */
 }
 
-/* آیکون‌های شبکه‌های اجتماعی */
+/* شبکه‌های اجتماعی */
 .social-icons {
     display: flex;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -75,8 +96,7 @@
     align-items: center;
     justify-content: center;
     background: #f5f5f5;
-    /* ❌ بدون انیمیشن */
-    transition: background 0.3s ease; 
+    transition: background 0.3s ease;
 }
 
 .social-link svg {
@@ -89,11 +109,7 @@
     transition: fill 0.3s ease;
 }
 
-.social-link:hover {
-    background: #e0e0e0;
-}
-
-/* رنگ‌های اختصاصی فقط موقع هاور روی آیکون */
+/* رنگ‌ها موقع هاور */
 .social-link.telegram:hover { background: #229ed9; }
 .social-link.telegram:hover svg path { fill: #fff; }
 
@@ -101,23 +117,10 @@
 .social-link.instagram:hover svg path { fill: #fff; }
 
 .social-link.aparat:hover { background: #ed145b; }
-.social-link.aparat:hover .aparat-dot { fill: #ed145b; } /* دایره‌های داخل آپارات قرمز می‌شن */
+.social-link.aparat:hover .aparat-dot { fill: #ed145b; }
 
 .social-link.youtube:hover { background: #ff0000; }
 .social-link.youtube:hover svg path { fill: #fff; }
-
-/* آیکون‌های نماد اعتماد */
-.trust-logos {
-    display: flex;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-.trust-logos img {
-    height: 80px; /* سایز دلخواه برای نمادها */
-    width: auto;
-    object-fit: contain;
-}
 
 /* ============================================
    ===== کپی‌رایت =====
@@ -138,10 +141,7 @@
 @media (max-width: 992px) {
     .footer-grid {
         grid-template-columns: 1fr 1fr;
-    }
-    
-    .footer-logos {
-        align-items: flex-start;
+        gap: 30px;
     }
 }
 
@@ -156,8 +156,17 @@
         text-align: center;
     }
 
-    .footer-logos {
-        align-items: center;
+    .footer-logo {
+        margin: 0 auto 20px;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .trust-logos {
+        display: flex;
+        justify-content: center;
     }
 
     .social-link {
